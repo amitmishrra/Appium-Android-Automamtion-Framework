@@ -1,0 +1,46 @@
+# Compiled class files
+*.class
+
+# Target folder
+target/
+
+# Maven Build files
+pom.xml.lock
+pom.xml.releaseBackup
+release.properties
+mvn-repo/
+
+# IntelliJ IDEA files
+*.iml
+.idea/
+.idea_modules/
+*.ipr
+*.iws
+
+# Eclipse files
+.classpath
+.project
+.settings/
+
+# Logs
+logs/
+*.log
+
+# Reports
+extentReports/
+
+# TestNG Reports
+test-output/
+
+# Appium server logs
+appiumLogs/
+
+# Environment configuration files
+src/test/resources/environment.properties
+
+# App configuration files
+src/test/resources/app.properties
+
+# Ignore all .jar files in the libs folder except for specific ones
+libs/*
+!libs/specific-library.jar
