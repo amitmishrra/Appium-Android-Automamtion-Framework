@@ -30,7 +30,6 @@ public class AppiumBasic extends BaseScript{
         click(preferenceDependencies);
         click(wifiButton);
         click(wifiSetting);
-        System.out.println("this code run succs");
         Thread.sleep(5000);
         sendKeys(wifiName, "Hello");
         click(okButton);
