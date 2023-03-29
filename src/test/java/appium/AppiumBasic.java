@@ -14,15 +14,16 @@ public class AppiumBasic extends BaseScript{
     By wifiName = AppiumBy.id("android:id/edit");
     By okButton = AppiumBy.id("android:id/button1");
     @Test
-    public void NativeAppAndroid() throws MalformedURLException, InterruptedException {
+    public void NativeAppAndroid() throws InterruptedException {
         click(preference);
         click(preferenceDependencies);
         click(wifiButton);
-        Assert.assertTrue(elementIsVisible(wifiButton));
+        Assert.assertTrue(isElementVisible(wifiButton));
         click(wifiSetting);
         Thread.sleep(5000);
         sendKeys(wifiName, "Hello");
         click(okButton);
         pressBackButton(2);
+        Assert.assertFalse(isElementVisible(wifiButton));
     }
 }

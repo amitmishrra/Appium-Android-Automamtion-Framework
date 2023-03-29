@@ -3,6 +3,8 @@ package appium;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 
+import java.util.logging.Logger;
+
 import static appium.BaseScript.driver;
 
 public class HelperClass {
@@ -21,7 +23,7 @@ public class HelperClass {
         }
     }
 
-    public boolean elementIsVisible(By element) {
+    public boolean isElementVisible(By element) {
         try {
             driver.findElement(element);
             return true;
@@ -29,4 +31,12 @@ public class HelperClass {
             return false;
         }
     }
+public String getText(By element){
+        if(isElementVisible(element)){
+          return  driver.findElement(element).getText();
+        }else{
+
+            return null;
+        }
+}
 }
